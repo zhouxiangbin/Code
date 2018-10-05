@@ -1,0 +1,21 @@
+//添加HTML编辑器自定义快捷标签按钮
+add_action('after_wp_tiny_mce', 'my_quicktags');
+function my_quicktags($mce_settings) {
+?>
+<script type="text/javascript">
+QTags.addButton( 'black', '后面的是自定义按钮--->', "", "" );
+QTags.addButton( 'wp_page', '分页按钮', "<!--nextpage-->\n", "" );
+QTags.addButton( 'span', '下划线', '<span class="xhx">', '</span>' ); 
+QTags.addButton( 'btm-zd', 'Go Button', '<a class="btm-zd" href="#" target="_blank" rel="nofollow">', '</a>' ); 
+QTags.addButton( 'btm-dl', 'Download', '<a class="btm-dl" href="#" target="_blank" rel="nofollow">', '</a>' ); 
+QTags.addButton( 'textsuc', '绿边文本框', '<p class="textsuc">', '</p>' ); 
+QTags.addButton( 'texterr', '红边文本框', '<p class="texterr">', '</p>' ); 
+QTags.addButton( 'textok', '蓝边文本框', '<p class="textok">', '</p>' ); 
+QTags.addButton( 'textgreen', '绿块文本', '<p class="textgreen">', '</p>' ); 
+QTags.addButton( 'textblue', '蓝块文本', '<p class="textblue">', '</p>' ); 
+QTags.addButton( 'textred', '红块文本', '<p class="textred">', '</p>' );
+function my_quicktags() {
+}
+</script>
+<?php
+}
